@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root { --burgundy:#5a1027; --burgundy-2:#781b35; --cream:#f7f1e6; --ivory:#fffdf8; --gold:#b58a45; --ink:#2a2020; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--cream); color:var(--ink); font-family:Inter, sans-serif; overflow-x:hidden; }
+.font-display { font-family:'Cormorant Garamond', serif; }
+::selection { background:#5a1027; color:#fffdf8; }
+.container-premium { width:min(1180px, calc(100% - 40px)); margin-inline:auto; }
+.section-pad { padding-block:clamp(76px, 9vw, 132px); }
+.gold-rule { width:72px; height:1px; background:var(--gold); display:block; }
+.noise { position:relative; }
+.noise::after { content:""; position:absolute; inset:0; pointer-events:none; opacity:.035; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E"); }
+.hero-vignette { background:linear-gradient(90deg, rgba(29,7,15,.82) 0%, rgba(29,7,15,.42) 52%, rgba(29,7,15,.12) 100%); }
+@media(max-width:640px){ .container-premium{width:min(100% - 28px,1180px)} }
+@media(prefers-reduced-motion:reduce){ html{scroll-behavior:auto} *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important} }
